@@ -1,0 +1,124 @@
+Pentesting Cheatsheet/
+│
+├── 1. Reconnaissance & Information Gathering/
+│   ├── Passive Reconnaissance/
+│   │   ├── OSINT
+│   │   ├── WHOIS & Domain Enumeration
+│   │   ├── Email Enumeration
+│   ├── Active Reconnaissance/
+│   │   ├── Port Scanning (Nmap, Masscan)
+│   │   ├── Service Enumeration
+│   │   ├── Banner Grabbing
+│   ├── Network Mapping & Enumeration/
+│   │   ├── Identifying Live Hosts
+│   │   ├── SMB & Network Share Enumeration
+│   │   ├── SNMP Enumeration
+│   ├── Tool-Specific Reconnaissance/
+│   │   ├── Nmap
+│   │   ├── Masscan
+│   │   ├── Amass (Subdomain Recon)
+│   │   ├── Shodan & Censys
+│
+├── 2. Service Enumeration & Exploitation/
+│   ├── Common Ports & Services/
+│   │   ├── FTP (Anonymous Login, Exploits)
+│   │   ├── SMB (Null Sessions, Exploits)
+│   │   ├── RPC (User/Group Enumeration)
+│   │   ├── RDP (Brute-force, Exploits)
+│   │   ├── SSH (Key Cracking, Weak Credentials)
+│   │   ├── Web Services/
+│   │   │   ├── Web Server Enumeration (Nikto, Dirbuster, Gobuster)
+│   │   │   ├── SQL Injection
+│   │   │   ├── Cross-Site Scripting (XSS)
+│   │   │   ├── Remote Code Execution (RCE)
+│   │   │   ├── SSRF & LFI/RFI
+│   │   ├── Database Attacks/
+│   │   │   ├── MySQL & PostgreSQL Enumeration
+│   │   │   ├── MSSQL Privilege Escalation
+│   │   │   ├── Extracting Credentials from Databases
+│   ├── Tool-Specific Exploitation/
+│   │   ├── Metasploit Framework
+│   │   ├── SQLMap
+│   │   ├── Burp Suite
+│   │   ├── Responder
+│   │   ├── Evil-WinRM
+│
+├── 3. Post Exploitation & Privilege Escalation/
+│   ├── Windows Privilege Escalation/
+│   │   ├── Misconfigured Services (alwaysInstallElevated)
+│   │   ├── Unquoted Service Path
+│   │   ├── DLL Hijacking
+│   │   ├── Privileged Tokens (SeImpersonate, SeAssignPrimaryToken)
+│   │   ├── Kernel Exploits (PrintNightmare, Juicy Potato)
+│   ├── Linux Privilege Escalation/
+│   │   ├── SUID Binaries
+│   │   ├── Writable /etc/passwd
+│   │   ├── Cron Job Exploits
+│   │   ├── Kernel Exploits (Dirty Pipe, Dirty Cow)
+│   ├── Windows Credentialed Enumeration (After Access)/
+│   │   ├── User & Group Enumeration
+│   │   ├── Running Processes & Services
+│   │   ├── Installed Software & Patches
+│   │   ├── Network & Firewall Information
+│   │   ├── File & Directory Enumeration
+│   │   ├── Credential Dumping
+│   ├── Tool-Specific Post-Exploitation/
+│   │   ├── WinPEAS & LinPEAS (Privilege Escalation Scripts)
+│   │   ├── Seatbelt (Windows Enumeration)
+│   │   ├── PowerUp & PowerShell Privilege Escalation
+│
+├── 4. Active Directory Attacks/
+│   ├── Enumeration/
+│   │   ├── BloodHound & SharpHound
+│   │   ├── LDAP Enumeration (ldapsearch)
+│   │   ├── SMB & RPC Enumeration (enum4linux-ng, rpcclient)
+│   │   ├── CrackMapExec (Enumeration & Lateral Movement)
+│   │   ├── Impacket Toolkit (Various Attacks)
+│   ├── Credential Attacks/
+│   │   ├── Kerberoasting
+│   │   ├── ASREPRoasting
+│   │   ├── Pass-the-Hash
+│   │   ├── Pass-the-Ticket
+│   │   ├── NTLM Relay Attacks
+│   │   ├── Mimikatz (Credential Dumping)
+│   │   ├── SecretsDump (Impacket)
+│   ├── Lateral Movement/
+│   │   ├── PsExec (Impacket)
+│   │   ├── RDP & WinRM Exploitation
+│   │   ├── SMB Exec (CrackMapExec & Impacket)
+│   │   ├── DCOM Lateral Movement
+│   ├── Privilege Escalation/
+│   │   ├── DCSync Attack
+│   │   ├── Golden Ticket Attack
+│   │   ├── Silver Ticket Attack
+│   │   ├── Skeleton Key Attack
+│   ├── Tool-Specific AD Attacks/
+│   │   ├── BloodHound & SharpHound (Graph-Based AD Attack Mapping)
+│   │   ├── CrackMapExec (SMB, LDAP, WinRM, Mimikatz)
+│   │   ├── Impacket (SecretsDump, PsExec, NTLM Relay)
+│
+├── 5. Lateral Movement & Persistence/
+│   ├── Windows Persistence/
+│   │   ├── Scheduled Tasks
+│   │   ├── Registry Persistence
+│   │   ├── DLL Hijacking
+│   ├── Linux Persistence/
+│   │   ├── Cron Jobs
+│   │   ├── SSH Backdoors
+│   │   ├── SUID Backdoors
+│   ├── Tool-Specific Lateral Movement & Persistence/
+│   │   ├── Cobalt Strike (Beacons & Persistence)
+│   │   ├── Empire (Post-Exploitation Framework)
+│   │   ├── Covenant C2 (Lateral Movement)
+│
+├── 6. Exfiltration & Cleanup/
+│   ├── Extracting Data/
+│   │   ├── SCP, Rsync, Wget
+│   │   ├── Tunneling Data Over HTTP/S
+│   │   ├── DNS Exfiltration
+│   ├── Clearing Logs/
+│   │   ├── Windows Log Cleaning (wevtutil, auditpol)
+│   │   ├── Linux Log Cleaning (history -c, shred)
+│   ├── Tool-Specific Exfiltration & Cleanup/
+│   │   ├── Rclone (Cloud Exfiltration)
+│   │   ├── PowerShell & Living Off the Land (LOLBAS)
